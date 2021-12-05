@@ -84,16 +84,9 @@ with Listener(on_press = press_on) as listener:
         screen.fill((0, 0, 0))
         draw()
         refresh()  # swap buffer to screen
-        if iteration % 50 == 0:
-            # listener.join()
-            # random.seed(time.time())
-            # xm -= ((random.randrange(0, 2) * 2) - 1) * cell_size
-            # ym -= ((random.randrange(0, 2) * 2) - 1) * cell_size
-            xm -= move_x*cell_size
-            move_x = 0
-            ym += move_y*cell_size
-            move_y = 0
-            # print(xm, ym)
-            # xm += cell_size
+        xm -= move_x*cell_size
+        move_x = 0
+        ym += move_y*cell_size
+        move_y = 0
 
 print('end')
